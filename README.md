@@ -5,6 +5,14 @@ Because plain-text signatures are so 1999. 😉
 
 ---
 
+## 📸 Email Signature Preview
+
+Here’s what the signature looks like in action:
+
+![Email Signature Preview](./img/screenshot.png)
+
+---
+
 ## 📖 About
 
 This project is my personal **email signature builder**, crafted with:
