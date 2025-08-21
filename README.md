@@ -1,3 +1,5 @@
+# EmailSig-vite  
+A fast, modular email signature generator built with React, Vite, and Tailwind CSS.
 # Email Signature Demo
 
 Welcome to the **Email Signature Preview** project!  
@@ -45,3 +47,10 @@ cd Emailsig
 
 ```bash
 npm install
+
+```md
+3. Start the development server:
+
+```bash
+npm run dev
+
