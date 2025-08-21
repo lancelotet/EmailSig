@@ -1,5 +1,8 @@
 # EmailSig
 
+![EmailSig Demo](screenshot.png)
+
+
 A customizable email signature generator built with HTML and CSS. This project helps users create professional email signatures quickly and efficiently using Visual Studio Code and guidance from ChattyP (an AI assistant).
 
 ## Features
