@@ -24,7 +24,7 @@ This project showcases a professional email signature with:
 
 Below is a screenshot of the email signature:
 
-![Signature Screenshot](docs/SIGNATURE.png)
+![Signature Screenshot](img/screenshot.png)
 
 ---
 
@@ -32,23 +32,11 @@ Below is a screenshot of the email signature:
 
 You can view the **interactive demo** here:  
 
-[View Demo](docs/index.html)
+[Open Demo](docs/index.html)
 
 > The demo includes a top navigation bar for quick access:
 > - **Back to README** → Returns to this README on GitHub  
 > - **View Screenshot** → Scrolls directly to the screenshot preview  
-
----
-
-## About
-
-The demo page is fully responsive and includes:
-
-- Hover animations on the signature card  
-- Hover glow effect on the left border  
-- Profile image scaling on hover  
-- Screenshot preview  
-- Sticky top navigation bar for seamless navigation
 
 ---
 
@@ -58,3 +46,4 @@ The demo page is fully responsive and includes:
 
 ```bash
 git clone https://github.com/lancelotet/EmailSig.git
+cd EmailSig
