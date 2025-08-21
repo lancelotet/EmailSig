@@ -32,7 +32,7 @@ Below is a screenshot of the email signature:
 
 You can view the **interactive demo** here:  
 
-[Open Demo](docs/index.html)
+[View Demo](docs/index.html)
 
 > The demo includes a top navigation bar for quick access:
 > - **Back to README** → Returns to this README on GitHub  
