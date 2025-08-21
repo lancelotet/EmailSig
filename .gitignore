@@ -1,0 +1,14 @@
+# Node modules (if you add a build system later)
+node_modules/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Editor-specific
+.vscode/
+.idea/
+
+# Environment files
+.env
+
