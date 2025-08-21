@@ -17,7 +17,7 @@ This project showcases a professional email signature with:
 
 You can view the live interactive demo here:  
 
-[Open Demo](https://username.github.io/EmailSig/)
+[Open Demo](https://lancelotet.github.io/EmailSig/)
 
 > The demo includes a top navigation bar:
 > - **View README** → Opens this repository on GitHub  
@@ -40,3 +40,8 @@ Here’s a preview of the signature:
 ```bash
 git clone https://github.com/lancelotet/Emailsig.git
 cd Emailsig
+
+2. Install dependencies:
+
+```bash
+npm install
