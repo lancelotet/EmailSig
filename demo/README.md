@@ -9,38 +9,31 @@ This project showcases a professional email signature with:
 - Responsive, mobile-friendly design
 - Interactive hover effects
 - Screenshot preview
-- Two-way navigation (README → Demo → README)
+- Self-contained demo in `/docs`
 
 ---
 
-## Navigation
+## Demo
 
-- [View Demo](docs/index.html) ← Opens the interactive demo page  
-- [Back to README](README.md) ← If coming from demo, you can return here
-
----
-
-## Demo Preview
-
-Below is a screenshot of the email signature:
-
-![Signature Screenshot](img/screenshot.png)
-
----
-
-## Live Demo
-
-You can view the **interactive demo** here:  
+You can view the live interactive demo here:  
 
 [Open Demo](docs/index.html)
 
-> The demo includes a top navigation bar for quick access:
-> - **Back to README** → Returns to this README on GitHub  
-> - **View Screenshot** → Scrolls directly to the screenshot preview  
+> The demo includes a top navigation bar:
+> - **View README** → Opens this repository on GitHub  
+> - **View Screenshot** → Scrolls directly to the signature screenshot  
 
 ---
 
-## How to Use
+## Screenshot Preview
+
+Here’s a preview of the signature:
+
+![Signature Screenshot](docs/screenshot.png)
+
+---
+
+## How to Use Locally
 
 1. Clone the repository:
 
