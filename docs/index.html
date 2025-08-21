@@ -1,87 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EmailSig + README</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Signature Preview</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f9f9f9;
-    }
-    .signature {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      max-width: 600px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .signature img {
-      float: left;
-      margin-right: 15px;
-      border-radius: 8px;
-    }
-    .signature h3 {
+      background: #f4f4f4;
       margin: 0;
-      color: #0a66c2;
-    }
-    .signature p {
-      margin: 2px 0;
-      font-size: 14px;
+      padding: 2rem;
       color: #333;
     }
-    .disclaimer {
-      font-size: 11px;
-      color: #555;
-      margin-top: 15px;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
+    h1 {
+      color: #0078d7;
+      margin-bottom: 1rem;
     }
-    #readme {
-      margin-top: 40px;
+    .card {
       background: #fff;
-      padding: 20px;
-      border: 1px solid #ddd;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .screenshot {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #0078d7;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s ease-in-out;
+    }
+    .btn:hover {
+      background: #005ea6;
+    }
+    .center {
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>EmailSig Demo</h1>
-  
-  <div class="signature">
-    <img src="SIGNATURE.png" alt="Lance Terrill" width="100" height="100" />
-    <h3>Best regards,<br>Lance Terrill</h3>
-    <p>Project Leader | GIS & Python Specialist | AI & DevOps Innovator | Modular Solutions Architect</p>
-    <p>📧 <a href="mailto:lance.terrill@gmail.com">lance.terrill@gmail.com</a></p>
-    <p>🔗 <a href="https://linkedin.com/in/lanceterrill">LinkedIn</a></p>
 
-    <div class="disclaimer">
-      CONFIDENTIALITY NOTICE: This email and any attachments are intended solely for the use of the recipient(s)...
-    </div>
-  <div style="margin-top:20px; text-align:center;">
-  <a href="https://github.com/lancelotet/EmailSig#readme" 
-     style="display:inline-block; padding:10px 20px; background:#0078D7; color:#fff; 
-            text-decoration:none; border-radius:6px; font-weight:bold;">
-    📖 View Full README
-  </a>
-</div>
+  <h1>Email Signature Preview</h1>
 
+  <!-- Signature Preview Card -->
+  <div class="card">
+    <table style="font-family: Arial; font-size: 14px; color: #333;">
+      <tr>
+        <td style="padding: 0 10px; border-left: 3px solid #0078d7;">
+          <p style="margin:0; font-weight: bold; color:#0078d7;">Lance Terrill</p>
+          <p style="margin:0;">IT / Web Developer | AI Enthusiast</p>
+          <p style="margin:0;"><a href="mailto:lance.terrill@gmail.com" style="color:#0078d7; text-decoration:none;">📧 lance.terrill@gmail.com</a></p>
+          <p style="margin:0;"><a href="https://www.lancelotet.com" style="color:#0078d7; text-decoration:none;">🌐 www.lancelotet.com</a></p>
+          <p style="margin:0;">📞 308-241-2275</p>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-  <!-- Markdown renderer -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    fetch("https://raw.githubusercontent.com/lancelotet/EmailSig/main/README.md")
-      .then(response => response.text())
-      .then(text => {
-        document.getElementById("readme").innerHTML = marked.parse(text);
-      })
-      .catch(err => {
-        document.getElementById("readme").innerHTML = "❌ Could not load README.md";
-        console.error(err);
-      });
-  </script>
+  <!-- Screenshot Preview -->
+  <h1>Screenshot Preview</h1>
+  <div class="card center">
+    <img src="img/screenshot.png" alt="Signature Screenshot" class="screenshot">
+  </div>
+
+  <!-- GitHub Button -->
+  <div class="center">
+    <a href="https://github.com/lancelotet/EmailSig" class="btn" target="_blank">
+      View README on GitHub
+    </a>
+  </div>
+
 </body>
 </html>
