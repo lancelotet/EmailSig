@@ -36,14 +36,19 @@ function ExportButtons({ formData }) {
 
   return (
     <div className="mt-6 flex flex-wrap gap-4">
-  <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+  <button
+    onClick={copyToClipboard}
+    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+  >
     📋 Copy HTML
   </button>
-  <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+  <button
+    onClick={exportAsPNG}
+    className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+  >
     🖼️ Export as PNG
   </button>
 </div>
-
   );
 }
 
