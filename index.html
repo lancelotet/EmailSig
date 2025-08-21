@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EmailSig Demo</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 24px;
+      color: #0078D4;
+    }
+    .signature-container {
+      margin-top: 20px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 500px;
     }
     .signature {
       border-top: 2px solid #0078D4;
       padding-top: 10px;
-      max-width: 500px;
     }
     .name {
       font-size: 18px;
@@ -21,11 +34,11 @@
     }
     .title {
       font-size: 14px;
-      color: #333;
+      color: #444;
     }
     .contact {
-      font-size: 12px;
-      margin-top: 5px;
+      font-size: 13px;
+      margin-top: 6px;
     }
     .contact a {
       color: #0078D4;
@@ -37,14 +50,17 @@
   </style>
 </head>
 <body>
-  <h2>Email Signature Preview</h2>
-  <div class="signature">
-    <div class="name">Lance Terrill</div>
-    <div class="title">IT / Web Developer | AI Enthusiast</div>
-    <div class="contact">
-      📧 <a href="mailto:lance.terrill@gmail.com">lance.terrill@gmail.com</a><br>
-      🌐 <a href="https://www.lancelotet.com" target="_blank">www.lancelotet.com</a><br>
-      📞 308-241-2275
+  <h1>Email Signature Preview</h1>
+
+  <div class="signature-container">
+    <div class="signature">
+      <div class="name">Lance Terrill</div>
+      <div class="title">IT / Web Developer | AI Enthusiast</div>
+      <div class="contact">
+        📧 <a href="mailto:lance.terrill@gmail.com">lance.terrill@gmail.com</a><br>
+        🌐 <a href="https://www.lancelotet.com" target="_blank">www.lancelotet.com</a><br>
+        📞 308-241-2275
+      </div>
     </div>
   </div>
 </body>
