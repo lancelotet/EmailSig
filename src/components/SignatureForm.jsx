@@ -67,6 +67,17 @@ function SignatureForm({ formData, setFormData }) {
           className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
         />
       </label>
+
+      <label className="block">
+        <span className="text-gray-700">Image URL</span>
+        <input
+          type="url"
+          name="imageUrl"
+          value={formData.imageUrl}
+          onChange={handleChange}
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+        />
+      </label>
     </form>
   );
 }
