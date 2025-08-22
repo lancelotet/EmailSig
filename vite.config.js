@@ -1,4 +1,7 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
-  base: '', // ← remove or set to empty string
+  base: '/emailsig-vite/',
   plugins: [react()],
 });

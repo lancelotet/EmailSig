@@ -1,56 +1,12 @@
-# EmailSig-vite  
-A fast, modular email signature generator built with React, Vite, and Tailwind CSS.
-# Email Signature Demo
+# React + Vite
 
-Welcome to the **Email Signature Preview** project!  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This project showcases a professional email signature with:
+Currently, two official plugins are available:
 
-- Profile image
-- Contact info
-- Responsive, mobile-friendly design
-- Interactive hover effects
-- Screenshot preview
-- Self-contained demo in `/docs`
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+## Expanding the ESLint configuration
 
-## Demo
-
-You can view the live interactive demo here:  
-
-[Open Demo](https://lancelotet.github.io/EmailSig/)
-
-> The demo includes a top navigation bar:
-> - **View README** → Opens this repository on GitHub  
-> - **View Screenshot** → Scrolls directly to the signature screenshot  
-
----
-
-## Screenshot Preview
-
-Here’s a preview of the signature:
-
-![Signature Screenshot](docs/screenshot.png)
-
----
-
-## How to Use Locally
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/lancelotet/Emailsig.git
-cd Emailsig
-
-2. Install dependencies:
-
-```bash
-npm install
-
-```md
-3. Start the development server:
-
-```bash
-npm run dev
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
