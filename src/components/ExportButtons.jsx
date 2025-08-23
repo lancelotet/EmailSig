@@ -4,7 +4,7 @@ import template from '../../SIGNATURE_TEMPLATE.html?raw';
 
 function ExportButtons({ formData }) {
   const generateHTML = () => {
-    const { name, title, phone, email, social, imageUrl } = formData;
+    const { name, title, phone, email, social, location, imageUrl } = formData;
 
     let processedTemplate = template;
     processedTemplate = processedTemplate.replace(/{{name}}/g, name || '');
@@ -12,6 +12,7 @@ function ExportButtons({ formData }) {
     processedTemplate = processedTemplate.replace(/{{email}}/g, email || '');
     processedTemplate = processedTemplate.replace(/{{phone}}/g, phone || '');
     processedTemplate = processedTemplate.replace(/{{social}}/g, social || '');
+    processedTemplate = processedTemplate.replace(/{{location}}/g, location || '');
     // Use a default image if imageUrl is not provided
     processedTemplate = processedTemplate.replace(/{{imageUrl}}/g, imageUrl || 'SIGNATURE.png');
 
@@ -55,14 +56,18 @@ function ExportButtons({ formData }) {
     const preview = document.querySelector('.signature-preview-container');
     if (!preview) {
         console.error('Preview element not found');
+        alert('Error: Preview element not found.');
         return;
     }
 
-    html2canvas(preview).then((canvas) => {
+    html2canvas(preview, { useCORS: true, allowTaint: true }).then((canvas) => {
       const link = document.createElement('a');
       link.download = 'email_signature.png';
-      link.href = canvas.toDataURL();
+      link.href = canvas.toDataURL('image/png');
       link.click();
+    }).catch(e => {
+      console.error("html2canvas error:", e);
+      alert('Failed to export as PNG. See console for details.');
     });
   };
 

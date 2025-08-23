@@ -36,6 +36,17 @@ function SignatureForm({ formData, setFormData }) {
       </label>
 
       <label className="block">
+        <span className="text-gray-700">Email</span>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+        />
+      </label>
+
+      <label className="block">
         <span className="text-gray-700">Phone</span>
         <input
           type="text"
@@ -47,11 +58,11 @@ function SignatureForm({ formData, setFormData }) {
       </label>
 
       <label className="block">
-        <span className="text-gray-700">Email</span>
+        <span className="text-gray-700">Location</span>
         <input
-          type="email"
-          name="email"
-          value={formData.email}
+          type="text"
+          name="location"
+          value={formData.location}
           onChange={handleChange}
           className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
         />
