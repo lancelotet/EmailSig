@@ -1,54 +1,97 @@
 import React from 'react';
 import html2canvas from 'html2canvas';
+import template from '../../SIGNATURE_TEMPLATE.html?raw';
 
 function ExportButtons({ formData }) {
   const generateHTML = () => {
-    const { name, title, phone, email, social } = formData;
-    return `
-      <div style="font-family: Arial, sans-serif;">
-        <p style="font-weight: bold; font-size: 1.2em;">${name}</p>
-        <p style="font-style: italic; color: #666;">${title}</p>
-        <p style="color: #444;">📞 ${phone}</p>
-        <p style="color: #444;">✉️ ${email}</p>
-        ${social ? `<p style="color: #444;">🔗 <a href="${social}">${social}</a></p>` : ''}
-      </div>
-    `;
+    const { name, title, phone, email, social, location, imageUrl } = formData;
+
+    let processedTemplate = template;
+    processedTemplate = processedTemplate.replace(/{{name}}/g, name || '');
+    processedTemplate = processedTemplate.replace(/{{title}}/g, title || '');
+    processedTemplate = processedTemplate.replace(/{{email}}/g, email || '');
+    processedTemplate = processedTemplate.replace(/{{phone}}/g, phone || '');
+    processedTemplate = processedTemplate.replace(/{{social}}/g, social || '');
+    processedTemplate = processedTemplate.replace(/{{location}}/g, location || '');
+    // Use a default image if imageUrl is not provided
+    processedTemplate = processedTemplate.replace(/{{imageUrl}}/g, imageUrl || 'SIGNATURE.png');
+
+    return processedTemplate;
   };
 
   const copyToClipboard = () => {
     const html = generateHTML();
-    navigator.clipboard.writeText(html)
-      .then(() => alert('Signature HTML copied to clipboard!'))
-      .catch(() => alert('Failed to copy. Try again.'));
+    // Use the Clipboard API to copy rich text
+    try {
+      const blob = new Blob([html], { type: 'text/html' });
+      const clipboardItem = new ClipboardItem({ 'text/html': blob });
+      navigator.clipboard.write([clipboardItem]).then(() => {
+        alert('Signature copied to clipboard!');
+      }, (err) => {
+        console.error('Failed to copy rich text, falling back to plain text.', err);
+        navigator.clipboard.writeText(html)
+          .then(() => alert('Signature HTML (source code) copied to clipboard! This is a fallback.'))
+          .catch(err => alert('Failed to copy.', err));
+      });
+    } catch (e) {
+      console.error('Clipboard API not supported, falling back to plain text.', e);
+      navigator.clipboard.writeText(html)
+        .then(() => alert('Signature HTML (source code) copied to clipboard! This is a fallback.'))
+        .catch(err => alert('Failed to copy.', err));
+    }
+  };
+
+  const downloadHTML = () => {
+    const html = generateHTML();
+    const blob = new Blob([html], { type: 'text/html' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'email_signature.html';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const exportAsPNG = () => {
-    const preview = document.querySelector('.signature-block');
-    if (!preview) return;
+    const preview = document.querySelector('.signature-preview-container');
+    if (!preview) {
+        console.error('Preview element not found');
+        alert('Error: Preview element not found.');
+        return;
+    }
 
-    html2canvas(preview).then((canvas) => {
+    html2canvas(preview, { useCORS: true, allowTaint: true }).then((canvas) => {
       const link = document.createElement('a');
       link.download = 'email_signature.png';
-      link.href = canvas.toDataURL();
+      link.href = canvas.toDataURL('image/png');
       link.click();
+    }).catch(e => {
+      console.error("html2canvas error:", e);
+      alert('Failed to export as PNG. See console for details.');
     });
   };
 
   return (
     <div className="mt-6 flex flex-wrap gap-4">
-  <button
-    onClick={copyToClipboard}
-    className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-  >
-    📋 Copy HTML
-  </button>
-  <button
-    onClick={exportAsPNG}
-    className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-  >
-    🖼️ Export as PNG
-  </button>
-</div>
+      <button
+        onClick={copyToClipboard}
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+      >
+        📋 Copy HTML
+      </button>
+      <button
+        onClick={downloadHTML}
+        className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+      >
+        💾 Download HTML
+      </button>
+      <button
+        onClick={exportAsPNG}
+        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+      >
+        🖼️ Export as PNG
+      </button>
+    </div>
   );
 }
 
