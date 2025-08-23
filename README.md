@@ -1,12 +1,41 @@
-# React + Vite
+# EmailSig - Email Signature Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and easy-to-use email signature generator built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Live Preview:** See your email signature update in real-time as you type.
+- **Customizable Fields:** Personalize your signature with fields for your name, title, phone number, email, social media links, location, and a profile image.
+- **Multiple Export Options:**
+    - **Copy HTML:** Copies the raw HTML of the signature to your clipboard, ready to be pasted into your email client's signature settings.
+    - **Download HTML:** Download the signature as an `.html` file.
+    - **Export as PNG:** Download a PNG image of your signature, perfect for use in platforms that support image signatures.
 
-## Expanding the ESLint configuration
+## Running Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run this project on your local machine, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/lancelotet/emailsig-vite.git
+    cd emailsig-vite
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open your browser and navigate to the URL provided by Vite (usually `http://localhost:5173`).
+
+## Tech Stack
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [html2canvas](https://html2canvas.hertzen.com/)

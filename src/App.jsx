@@ -7,11 +7,13 @@ import ExportButtons from './components/ExportButtons.jsx';
 
 function App() {
   const [formData, setFormData] = useState({
-    name: '',
-    title: '',
-    phone: '',
-    email: '',
-    social: '',
+    name: 'Lance Terrill',
+    title: 'Project Leader | GIS & Python Specialist | AI & DevOps Innovator | Modular Solutions Architect',
+    phone: '123-456-7890',
+    email: 'lance.terrill@gmail.com',
+    social: 'https://www.linkedin.com/in/lanceterrill',
+    location: 'Houston, TX',
+    imageUrl: '/SIGNATURE.png',
   });
 
   return (

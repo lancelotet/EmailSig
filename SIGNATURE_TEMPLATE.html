@@ -2,7 +2,7 @@
   <tr>
     <!-- Profile Image -->
     <td style="vertical-align: top;">
-      <img src="SIGNATURE.png" alt="Lance Terrill" width="120" style="border-radius: 8px; border: 1px solid #ccc;
+      <img src="{{imageUrl}}" alt="{{name}}" width="120" style="border-radius: 8px; border: 1px solid #ccc;
 box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 border-radius: 4px;">
     </td>
@@ -11,15 +11,15 @@ border-radius: 4px;">
         Best regards,
       </p>
       <p style="margin: 6px 0 0 0; font-size: 15px; font-weight: bold; color: #0a66c2;">
-        Lance Terrill
+        {{name}}
       </p>
       <p style="margin: 4px 0 8px 0; font-size: 13px; color: #444;">
-        Project Leader | GIS & Python Specialist | AI & DevOps Innovator | Modular Solutions Architect
+        {{title}}
       </p>
-      <p style="margin: 2px 0;">📧 <a href="mailto:lance.terrill@gmail.com" style="color:#0a66c2; text-decoration:none;">lance.terrill@gmail.com</a></p>
-      <p style="margin: 2px 0;">📞 </p>
-      <p style="margin: 2px 0;">📍 </p>
-      <p style="margin: 6px 0 0 0;">🔗 <a href="https://www.linkedin.com/in/lanceterrill" style="color:#0a66c2; text-decoration:none;">LinkedIn</a></p>
+      <p style="margin: 2px 0;">📧 <a href="mailto:{{email}}" style="color:#0a66c2; text-decoration:none;">{{email}}</a></p>
+      <p style="margin: 2px 0;">📞 {{phone}}</p>
+      <p style="margin: 2px 0;">📍 {{location}}</p>
+      <p style="margin: 6px 0 0 0;">🔗 <a href="{{social}}" style="color:#0a66c2; text-decoration:none;">{{social}}</a></p>
     </td>
   </tr>
 </table>

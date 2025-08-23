@@ -36,17 +36,6 @@ function SignatureForm({ formData, setFormData }) {
       </label>
 
       <label className="block">
-        <span className="text-gray-700">Phone</span>
-        <input
-          type="text"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-        />
-      </label>
-
-      <label className="block">
         <span className="text-gray-700">Email</span>
         <input
           type="email"
@@ -58,11 +47,44 @@ function SignatureForm({ formData, setFormData }) {
       </label>
 
       <label className="block">
+        <span className="text-gray-700">Phone</span>
+        <input
+          type="text"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+        />
+      </label>
+
+      <label className="block">
+        <span className="text-gray-700">Location</span>
+        <input
+          type="text"
+          name="location"
+          value={formData.location}
+          onChange={handleChange}
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+        />
+      </label>
+
+      <label className="block">
         <span className="text-gray-700">Social Link</span>
         <input
           type="url"
           name="social"
           value={formData.social}
+          onChange={handleChange}
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
+        />
+      </label>
+
+      <label className="block">
+        <span className="text-gray-700">Image URL</span>
+        <input
+          type="url"
+          name="imageUrl"
+          value={formData.imageUrl}
           onChange={handleChange}
           className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
         />
