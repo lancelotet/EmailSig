@@ -12,7 +12,8 @@ function App() {
     phone: '123-456-7890',
     email: 'lance.terrill@gmail.com',
     social: 'https://www.linkedin.com/in/lanceterrill',
-    imageUrl: 'SIGNATURE.png',
+    location: 'Houston, TX',
+    imageUrl: '/SIGNATURE.png',
   });
 
   return (

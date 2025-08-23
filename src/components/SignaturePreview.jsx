@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/signature.css';
 
 function SignaturePreview({ formData }) {
-  const { name, title, phone, email, social, imageUrl } = formData;
+  const { name, title, phone, email, social, location, imageUrl } = formData;
 
   const tableStyle = {
     fontFamily: 'Arial, sans-serif',
@@ -67,7 +67,7 @@ function SignaturePreview({ formData }) {
                 📧 <a href={`mailto:${email}`} style={linkStyle}>{email}</a>
               </p>
               <p style={pStyle}>📞 {phone}</p>
-              <p style={pStyle}>📍 </p>
+              {location && <p style={pStyle}>📍 {location}</p>}
               {social && (
                 <p style={{ margin: '6px 0 0 0' }}>
                   🔗 <a href={social} style={linkStyle}>{social}</a>
